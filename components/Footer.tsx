@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Cross, Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
 import { COURSES } from "@/data/courses";
 import { CONTACT, SITE_NAME } from "@/data/site";
 
@@ -25,12 +25,12 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-4">
-            <Link href="/" className="flex items-center gap-2.5">
-              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-600">
-                <Cross className="h-5 w-5 text-white" aria-hidden="true" />
+            <Link href="/" className="inline-flex items-baseline gap-2.5">
+              <span aria-label="ASAP" className="font-display text-2xl font-extrabold tracking-tight text-white">
+                <span aria-hidden="true">ΛSΛP</span>
               </span>
-              <span className="font-display text-xl font-bold tracking-tight text-white">
-                ASAP <span className="text-brand-400">Health &amp; Safety</span>
+              <span className="font-display text-sm font-semibold text-aqua-400">
+                Health &amp; Safety
               </span>
             </Link>
             <p className="mt-5 max-w-sm leading-relaxed">

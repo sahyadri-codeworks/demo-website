@@ -262,7 +262,7 @@ export default function HomePage() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-white py-24">
+      <section id="faq" className="bg-white py-24">
         <div className="mx-auto max-w-3xl px-5 lg:px-8">
           <SectionHeading
             eyebrow="FAQ"

@@ -4,39 +4,40 @@
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, sans-serif;
   --font-display: var(--font-jakarta), var(--font-inter), ui-sans-serif, sans-serif;
 
-  /* Professional medical blue */
-  --color-brand-50: #eff6ff;
-  --color-brand-100: #dcecfd;
-  --color-brand-200: #c0defc;
-  --color-brand-300: #94c9fa;
-  --color-brand-400: #61aaf5;
-  --color-brand-500: #3c89f0;
-  --color-brand-600: #1d6ae0;
-  --color-brand-700: #1e56ce;
-  --color-brand-800: #1e47a7;
-  --color-brand-900: #1e3f84;
+  /* Royal ultramarine blue */
+  --color-brand-50: #f0f2fe;
+  --color-brand-100: #e1e5fc;
+  --color-brand-200: #c6cdfa;
+  --color-brand-300: #a0abf6;
+  --color-brand-400: #7484f0;
+  --color-brand-500: #4f60e9;
+  --color-brand-600: #2f47dd;
+  --color-brand-700: #2537bd;
+  --color-brand-800: #232f97;
+  --color-brand-900: #202a78;
 
-  /* Deep navy for text */
-  --color-navy-950: #0b1f35;
-  --color-navy-900: #102a45;
-  --color-navy-800: #1a3a5c;
-  --color-navy-700: #274b70;
-  --color-navy-600: #3d6086;
-  --color-navy-500: #5a7ba0;
-  --color-navy-400: #8aa3bf;
-  --color-navy-300: #b6c7d9;
+  /* Near-black ink for text */
+  --color-navy-950: #0e0f14;
+  --color-navy-900: #17181f;
+  --color-navy-800: #23242e;
+  --color-navy-700: #373947;
+  --color-navy-600: #4e5162;
+  --color-navy-500: #6b6f82;
+  --color-navy-400: #969aab;
+  --color-navy-300: #c5c8d6;
 
-  /* Soft teal secondary */
-  --color-aqua-50: #effcfa;
-  --color-aqua-100: #d4f6f1;
-  --color-aqua-200: #aeece5;
-  --color-aqua-400: #40c4b4;
-  --color-aqua-500: #22a99b;
-  --color-aqua-600: #198a80;
+  /* Soft lavender / periwinkle secondary */
+  --color-aqua-50: #f3f4fd;
+  --color-aqua-100: #e7e9fb;
+  --color-aqua-200: #d3d6f8;
+  --color-aqua-300: #babff3;
+  --color-aqua-400: #a3a9ef;
+  --color-aqua-500: #8289e6;
+  --color-aqua-600: #6067d6;
 
-  --shadow-card: 0 1px 2px rgb(16 42 69 / 0.04), 0 8px 24px -8px rgb(16 42 69 / 0.1);
-  --shadow-card-hover: 0 2px 4px rgb(16 42 69 / 0.05), 0 20px 40px -12px rgb(29 106 224 / 0.22);
-  --shadow-float: 0 12px 32px -8px rgb(16 42 69 / 0.18);
+  --shadow-card: 0 1px 2px rgb(14 15 20 / 0.04), 0 8px 24px -8px rgb(14 15 20 / 0.1);
+  --shadow-card-hover: 0 2px 4px rgb(14 15 20 / 0.05), 0 20px 40px -12px rgb(47 71 221 / 0.22);
+  --shadow-float: 0 12px 32px -8px rgb(14 15 20 / 0.18);
 }
 
 html {

@@ -20,7 +20,7 @@ export default function SectionHeading({
           {eyebrow}
         </span>
       )}
-      <Tag className="font-display text-3xl font-bold tracking-tight text-navy-900 sm:text-4xl">
+      <Tag className="font-display text-3xl font-extrabold tracking-tight text-navy-950 sm:text-4xl">
         {title}
       </Tag>
       {subtitle && <p className="mt-4 text-lg leading-relaxed text-navy-600">{subtitle}</p>}

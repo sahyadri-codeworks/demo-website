@@ -3,16 +3,28 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Cross, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const NAV_LINKS = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
-  { label: "Training Programs", href: "/courses" },
-  { label: "Corporate Training", href: "/corporate" },
-  { label: "Gallery", href: "/gallery" },
+  { label: "Courses", href: "/courses" },
+  { label: "Who We Serve", href: "/corporate" },
+  { label: "FAQ", href: "/#faq" },
   { label: "Contact", href: "/contact" },
 ];
+
+/* Stylized wordmark matching the brand logo — crossbar-less A's. */
+function Wordmark({ className = "" }: { className?: string }) {
+  return (
+    <span
+      aria-label="ASAP"
+      className={`font-display text-2xl font-extrabold tracking-tight ${className}`}
+    >
+      <span aria-hidden="true">ΛSΛP</span>
+    </span>
+  );
+}
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -36,24 +48,20 @@ export default function Header() {
   }, [open]);
 
   const isActive = (href: string) =>
-    href === "/" ? pathname === "/" : pathname.startsWith(href);
+    href === "/" ? pathname === "/" : !href.includes("#") && pathname.startsWith(href);
 
   return (
-    <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled || open
-          ? "bg-white/90 shadow-[0_1px_0_rgb(16_42_69/0.06),0_8px_24px_-12px_rgb(16_42_69/0.12)] backdrop-blur-md"
-          : "bg-transparent"
-      }`}
-    >
-      <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 lg:px-8" aria-label="Main">
-        <Link href="/" className="flex items-center gap-2.5">
-          <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-600 shadow-md shadow-brand-600/30">
-            <Cross className="h-5 w-5 text-white" aria-hidden="true" />
-          </span>
-          <span className="whitespace-nowrap font-display text-lg font-bold tracking-tight text-navy-900 sm:text-xl">
-            ASAP <span className="text-brand-600">Health &amp; Safety</span>
-          </span>
+    <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4 sm:px-6">
+      <nav
+        aria-label="Main"
+        className={`mx-auto flex h-16 max-w-6xl items-center justify-between rounded-full bg-white px-6 transition-shadow duration-300 sm:px-8 ${
+          scrolled
+            ? "shadow-[0_2px_4px_rgb(14_15_20/0.06),0_16px_40px_-12px_rgb(14_15_20/0.18)]"
+            : "shadow-[0_1px_2px_rgb(14_15_20/0.04),0_8px_28px_-10px_rgb(14_15_20/0.12)]"
+        }`}
+      >
+        <Link href="/" className="shrink-0">
+          <Wordmark className="text-brand-600" />
         </Link>
 
         <ul className="hidden items-center gap-1 lg:flex">
@@ -62,10 +70,10 @@ export default function Header() {
               <Link
                 href={link.href}
                 aria-current={isActive(link.href) ? "page" : undefined}
-                className={`whitespace-nowrap rounded-full px-3.5 py-2 text-[15px] font-medium transition-colors ${
+                className={`whitespace-nowrap rounded-full px-4 py-2 text-[15px] font-medium transition-colors ${
                   isActive(link.href)
-                    ? "bg-brand-50 text-brand-700"
-                    : "text-navy-700 hover:bg-brand-50 hover:text-brand-700"
+                    ? "text-brand-600"
+                    : "text-navy-700 hover:text-brand-600"
                 }`}
               >
                 {link.label}
@@ -74,35 +82,27 @@ export default function Header() {
           ))}
         </ul>
 
-        <div className="flex items-center gap-3">
-          <Link
-            href="/contact"
-            className="hidden whitespace-nowrap rounded-full bg-brand-600 px-6 py-2.5 font-display text-[15px] font-semibold text-white shadow-md shadow-brand-600/25 transition-all hover:-translate-y-0.5 hover:bg-brand-700 sm:inline-flex"
-          >
-            Book Training
-          </Link>
-          <button
-            type="button"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-xl text-navy-800 ring-1 ring-navy-300 lg:hidden"
-            aria-label={open ? "Close menu" : "Open menu"}
-            aria-expanded={open}
-            onClick={() => setOpen((v) => !v)}
-          >
-            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-          </button>
-        </div>
+        <button
+          type="button"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-full text-navy-800 ring-1 ring-navy-300 lg:hidden"
+          aria-label={open ? "Close menu" : "Open menu"}
+          aria-expanded={open}
+          onClick={() => setOpen((v) => !v)}
+        >
+          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+        </button>
       </nav>
 
       {/* Mobile slide-in drawer */}
       <div
-        className={`fixed inset-x-0 bottom-0 top-20 z-40 transition-opacity duration-300 lg:hidden ${
+        className={`fixed inset-x-0 bottom-0 top-24 z-40 transition-opacity duration-300 lg:hidden ${
           open ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
         }`}
       >
         <div className="absolute inset-0 bg-navy-950/30" onClick={() => setOpen(false)} aria-hidden="true" />
         <div
-          className={`absolute right-0 top-0 h-full w-80 max-w-[85%] overflow-y-auto bg-white p-6 shadow-float transition-transform duration-300 ${
-            open ? "translate-x-0" : "translate-x-full"
+          className={`absolute right-4 top-0 max-h-full w-80 max-w-[85%] overflow-y-auto rounded-3xl bg-white p-6 shadow-float transition-transform duration-300 ${
+            open ? "translate-y-0" : "-translate-y-4 opacity-0"
           }`}
         >
           <ul className="space-y-1">
@@ -110,6 +110,7 @@ export default function Header() {
               <li key={link.href}>
                 <Link
                   href={link.href}
+                  onClick={() => setOpen(false)}
                   className={`block rounded-xl px-4 py-3 font-medium ${
                     isActive(link.href)
                       ? "bg-brand-50 text-brand-700"
@@ -123,9 +124,9 @@ export default function Header() {
             <li className="pt-3">
               <Link
                 href="/contact"
-                className="block rounded-xl bg-brand-600 px-4 py-3 text-center font-display font-semibold text-white"
+                className="block rounded-full bg-brand-600 px-4 py-3 text-center font-display font-semibold text-white"
               >
-                Book Training
+                Join the Program
               </Link>
             </li>
           </ul>

@@ -8,9 +8,9 @@ import { Menu, X } from "lucide-react";
 const NAV_LINKS = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
-  { label: "Courses", href: "/courses" },
-  { label: "Who We Serve", href: "/corporate" },
-  { label: "FAQ", href: "/#faq" },
+  { label: "Training Programs", href: "/courses" },
+  { label: "Corporate Training", href: "/corporate" },
+  { label: "Gallery", href: "/gallery" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -54,7 +54,7 @@ export default function Header() {
     <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4 sm:px-6">
       <nav
         aria-label="Main"
-        className={`mx-auto flex h-16 max-w-6xl items-center justify-between rounded-full bg-white px-6 transition-shadow duration-300 sm:px-8 ${
+        className={`mx-auto flex h-16 max-w-7xl items-center justify-between rounded-full bg-white px-6 transition-shadow duration-300 sm:px-8 ${
           scrolled
             ? "shadow-[0_2px_4px_rgb(14_15_20/0.06),0_16px_40px_-12px_rgb(14_15_20/0.18)]"
             : "shadow-[0_1px_2px_rgb(14_15_20/0.04),0_8px_28px_-10px_rgb(14_15_20/0.12)]"
@@ -70,7 +70,7 @@ export default function Header() {
               <Link
                 href={link.href}
                 aria-current={isActive(link.href) ? "page" : undefined}
-                className={`whitespace-nowrap rounded-full px-4 py-2 text-[15px] font-medium transition-colors ${
+                className={`whitespace-nowrap rounded-full px-3 py-2 text-[15px] font-medium transition-colors ${
                   isActive(link.href)
                     ? "text-brand-600"
                     : "text-navy-700 hover:text-brand-600"
@@ -82,15 +82,23 @@ export default function Header() {
           ))}
         </ul>
 
-        <button
-          type="button"
-          className="inline-flex h-10 w-10 items-center justify-center rounded-full text-navy-800 ring-1 ring-navy-300 lg:hidden"
-          aria-label={open ? "Close menu" : "Open menu"}
-          aria-expanded={open}
-          onClick={() => setOpen((v) => !v)}
-        >
-          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </button>
+        <div className="flex items-center gap-3">
+          <Link
+            href="/contact"
+            className="hidden whitespace-nowrap rounded-full bg-brand-600 px-6 py-2.5 font-display text-[15px] font-semibold text-white shadow-md shadow-brand-600/25 transition-all hover:-translate-y-0.5 hover:bg-brand-700 sm:inline-flex"
+          >
+            Book Training
+          </Link>
+          <button
+            type="button"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full text-navy-800 ring-1 ring-navy-300 lg:hidden"
+            aria-label={open ? "Close menu" : "Open menu"}
+            aria-expanded={open}
+            onClick={() => setOpen((v) => !v)}
+          >
+            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
+        </div>
       </nav>
 
       {/* Mobile slide-in drawer */}
@@ -126,7 +134,7 @@ export default function Header() {
                 href="/contact"
                 className="block rounded-full bg-brand-600 px-4 py-3 text-center font-display font-semibold text-white"
               >
-                Join the Program
+                Book Training
               </Link>
             </li>
           </ul>

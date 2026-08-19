@@ -13,17 +13,24 @@ export default function SectionHeading({
   align?: "center" | "left";
   as?: "h1" | "h2";
 }) {
+  const centered = align === "center";
   return (
-    <Reveal className={`max-w-2xl ${align === "center" ? "mx-auto text-center" : "text-left"}`}>
+    <Reveal className={`max-w-2xl ${centered ? "mx-auto text-center" : "text-left"}`}>
       {eyebrow && (
-        <span className="mb-4 inline-flex items-center rounded-full bg-brand-50 px-4 py-1.5 text-sm font-semibold text-brand-700 ring-1 ring-brand-100">
+        <p
+          className={`mb-4 flex items-center gap-3 text-[13px] font-semibold uppercase tracking-[0.16em] text-brand-700 ${
+            centered ? "justify-center" : ""
+          }`}
+        >
+          <span aria-hidden="true" className="h-px w-8 bg-brand-400" />
           {eyebrow}
-        </span>
+          {centered && <span aria-hidden="true" className="h-px w-8 bg-brand-400" />}
+        </p>
       )}
-      <Tag className="font-display text-3xl font-extrabold tracking-tight text-navy-950 sm:text-4xl">
+      <Tag className="font-serif text-3xl font-semibold tracking-tight text-navy-950 sm:text-[2.6rem] sm:leading-[1.15]">
         {title}
       </Tag>
-      {subtitle && <p className="mt-4 text-lg leading-relaxed text-navy-600">{subtitle}</p>}
+      {subtitle && <p className="mt-5 text-lg leading-relaxed text-navy-600">{subtitle}</p>}
     </Reveal>
   );
 }

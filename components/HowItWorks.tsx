@@ -11,18 +11,14 @@ export default function HowItWorks() {
           title="From First Click to First Responder"
           subtitle="Getting your team trained is simple — four steps from enquiry to certification."
         />
-        <ol className="relative mt-16 grid gap-10 lg:grid-cols-4 lg:gap-6">
-          <div
-            aria-hidden="true"
-            className="absolute left-[12.5%] right-[12.5%] top-7 hidden border-t-2 border-dashed border-brand-200 lg:block"
-          />
+        <ol className="mt-16 grid gap-y-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-x-10">
           {STEPS.map((step, i) => (
-            <Reveal key={step.number} delay={i * 0.12} as="li" className="relative">
-              <div className="flex flex-col items-center text-center lg:px-2">
-                <span className="relative z-10 flex h-14 w-14 items-center justify-center rounded-full bg-brand-600 font-display text-lg font-bold text-white shadow-lg shadow-brand-600/30 ring-8 ring-white">
+            <Reveal key={step.number} delay={i * 0.12} as="li" className="relative lg:pr-2">
+              <div className="border-t-2 border-navy-950/10 pt-6">
+                <span className="font-serif text-4xl font-semibold text-brand-600">
                   {step.number}
                 </span>
-                <h3 className="mt-5 font-display text-lg font-bold text-navy-900">{step.title}</h3>
+                <h3 className="mt-4 font-display text-lg font-bold text-navy-950">{step.title}</h3>
                 <p className="mt-2 max-w-xs leading-relaxed text-navy-600">{step.description}</p>
               </div>
             </Reveal>

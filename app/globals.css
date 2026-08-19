@@ -3,41 +3,47 @@
 @theme {
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, sans-serif;
   --font-display: var(--font-jakarta), var(--font-inter), ui-sans-serif, sans-serif;
+  /* Editorial serif for display headlines. */
+  --font-serif: var(--font-fraunces), Georgia, "Times New Roman", serif;
 
-  /* Royal ultramarine blue */
-  --color-brand-50: #f0f2fe;
-  --color-brand-100: #e1e5fc;
-  --color-brand-200: #c6cdfa;
-  --color-brand-300: #a0abf6;
-  --color-brand-400: #7484f0;
-  --color-brand-500: #4f60e9;
-  --color-brand-600: #2f47dd;
-  --color-brand-700: #2537bd;
-  --color-brand-800: #232f97;
-  --color-brand-900: #202a78;
+  /* Primary — deep professional blue with an indigo cast (client-approved brand hue) */
+  --color-brand-50: #f1f3fd;
+  --color-brand-100: #e3e7fb;
+  --color-brand-200: #c8d0f7;
+  --color-brand-300: #a2aff1;
+  --color-brand-400: #7286e8;
+  --color-brand-500: #4a5fdd;
+  --color-brand-600: #2f45cf;
+  --color-brand-700: #2637ac;
+  --color-brand-800: #232f88;
+  --color-brand-900: #20296c;
 
-  /* Near-black ink for text */
-  --color-navy-950: #0e0f14;
-  --color-navy-900: #17181f;
-  --color-navy-800: #23242e;
-  --color-navy-700: #373947;
-  --color-navy-600: #4e5162;
-  --color-navy-500: #6b6f82;
-  --color-navy-400: #969aab;
-  --color-navy-300: #c5c8d6;
+  /* Ink — deep navy-charcoal for typography */
+  --color-navy-950: #10141f;
+  --color-navy-900: #181d2b;
+  --color-navy-800: #242a3a;
+  --color-navy-700: #384056;
+  --color-navy-600: #4f5871;
+  --color-navy-500: #6c7590;
+  --color-navy-400: #979eb5;
+  --color-navy-300: #c6cad9;
 
-  /* Soft lavender / periwinkle secondary */
-  --color-aqua-50: #f3f4fd;
-  --color-aqua-100: #e7e9fb;
-  --color-aqua-200: #d3d6f8;
-  --color-aqua-300: #babff3;
-  --color-aqua-400: #a3a9ef;
-  --color-aqua-500: #8289e6;
-  --color-aqua-600: #6067d6;
+  /* Warm off-white surface */
+  --color-cream: #faf9f6;
+  --color-cream-deep: #f4f2ec;
 
-  --shadow-card: 0 1px 2px rgb(14 15 20 / 0.04), 0 8px 24px -8px rgb(14 15 20 / 0.1);
-  --shadow-card-hover: 0 2px 4px rgb(14 15 20 / 0.05), 0 20px 40px -12px rgb(47 71 221 / 0.22);
-  --shadow-float: 0 12px 32px -8px rgb(14 15 20 / 0.18);
+  /* Muted slate-indigo secondary (labels, quiet accents) */
+  --color-aqua-50: #f2f4fb;
+  --color-aqua-100: #e5e9f7;
+  --color-aqua-200: #cdd4ee;
+  --color-aqua-300: #aab5e0;
+  --color-aqua-400: #8593cd;
+  --color-aqua-500: #6474b6;
+  --color-aqua-600: #4d5b99;
+
+  --shadow-card: 0 1px 2px rgb(16 20 31 / 0.04), 0 10px 28px -10px rgb(16 20 31 / 0.08);
+  --shadow-card-hover: 0 2px 4px rgb(16 20 31 / 0.04), 0 20px 44px -14px rgb(16 20 31 / 0.16);
+  --shadow-float: 0 16px 40px -12px rgb(16 20 31 / 0.16);
 }
 
 html {

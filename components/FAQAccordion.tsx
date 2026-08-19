@@ -14,7 +14,7 @@ export default function FAQAccordion() {
         return (
           <div
             key={faq.question}
-            className="overflow-hidden rounded-2xl bg-white shadow-card ring-1 ring-navy-300/15"
+            className="overflow-hidden rounded-xl border border-navy-950/[0.08] bg-white shadow-card"
           >
             <button
               type="button"
@@ -23,7 +23,7 @@ export default function FAQAccordion() {
               aria-controls={`faq-panel-${i}`}
               className="flex w-full items-center justify-between gap-4 px-7 py-5 text-left focus-visible:outline-2 focus-visible:outline-brand-600"
             >
-              <span className="font-display text-lg font-semibold text-navy-900">
+              <span className="font-display text-[17px] font-semibold text-navy-950">
                 {faq.question}
               </span>
               <ChevronDown

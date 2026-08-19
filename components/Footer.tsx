@@ -29,7 +29,7 @@ export default function Footer() {
               <span aria-label="ASAP" className="font-display text-2xl font-extrabold tracking-tight text-white">
                 <span aria-hidden="true">ΛSΛP</span>
               </span>
-              <span className="font-display text-sm font-semibold text-aqua-400">
+              <span className="font-display text-sm font-semibold text-brand-300">
                 Health &amp; Safety
               </span>
             </Link>
@@ -91,7 +91,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>{CONTACT.location}</li>
-              <li className="text-aqua-400">{CONTACT.onlineNote}</li>
+              <li className="text-brand-300">{CONTACT.onlineNote}</li>
             </ul>
           </div>
         </div>

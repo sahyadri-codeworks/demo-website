@@ -76,7 +76,7 @@ const IMAGES: GalleryImage[] = [
 export default function GalleryPage() {
   return (
     <>
-      <section className="bg-gradient-to-b from-brand-50 to-white pb-16 pt-32 sm:pt-36">
+      <section className="border-b border-navy-950/10 bg-cream pb-16 pt-36 sm:pt-40">
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
           <SectionHeading
             as="h1"
@@ -87,7 +87,7 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      <section className="bg-white pb-24">
+      <section className="bg-white py-24">
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
           <Reveal>
             <Lightbox images={IMAGES} />

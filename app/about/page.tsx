@@ -20,7 +20,7 @@ export default function AboutPage() {
   return (
     <>
       {/* Page hero */}
-      <section className="bg-gradient-to-b from-brand-50 to-white pb-16 pt-32 sm:pt-36">
+      <section className="border-b border-navy-950/10 bg-cream pb-16 pt-36 sm:pt-40">
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
           <SectionHeading
             as="h1"
@@ -35,7 +35,7 @@ export default function AboutPage() {
       <section className="bg-white py-20">
         <div className="mx-auto max-w-3xl px-5 lg:px-8">
           <Reveal>
-            <h2 className="font-display text-2xl font-bold text-navy-900 sm:text-3xl">Our Story</h2>
+            <h2 className="font-serif text-2xl font-semibold tracking-tight text-navy-950 sm:text-3xl">Our Story</h2>
             <div className="mt-6 space-y-5 text-lg leading-relaxed text-navy-600">
               <p>
                 Most medical emergencies are decided before the ambulance arrives. Cardiac arrest,
@@ -89,11 +89,11 @@ export default function AboutPage() {
               },
             ].map(({ icon: Icon, title, description }, i) => (
               <Reveal key={title} delay={i * 0.1}>
-                <div className="flex h-full flex-col rounded-3xl bg-white p-8 shadow-card ring-1 ring-navy-300/15">
-                  <span className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-aqua-50 text-aqua-600">
-                    <Icon className="h-7 w-7" aria-hidden="true" />
+                <div className="flex h-full flex-col rounded-2xl border border-navy-950/[0.08] bg-white p-8 shadow-card">
+                  <span className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-aqua-50 text-aqua-600">
+                    <Icon className="h-6 w-6" aria-hidden="true" />
                   </span>
-                  <h2 className="font-display text-xl font-bold text-navy-900">{title}</h2>
+                  <h2 className="font-serif text-xl font-semibold tracking-tight text-navy-950">{title}</h2>
                   <p className="mt-3 leading-relaxed text-navy-600">{description}</p>
                 </div>
               </Reveal>
@@ -103,24 +103,24 @@ export default function AboutPage() {
       </section>
 
       {/* Vision & Mission */}
-      <section className="bg-brand-50/50 py-20">
+      <section className="bg-cream py-20">
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
           <div className="grid gap-6 lg:grid-cols-2">
             <Reveal>
-              <div className="flex h-full flex-col rounded-3xl bg-white p-10 shadow-card ring-1 ring-navy-300/15">
-                <span className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-50 text-brand-600">
-                  <Eye className="h-7 w-7" aria-hidden="true" />
+              <div className="flex h-full flex-col rounded-2xl border border-navy-950/[0.08] bg-white p-10 shadow-card">
+                <span className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand-50 text-brand-600">
+                  <Eye className="h-6 w-6" aria-hidden="true" />
                 </span>
-                <h2 className="font-display text-2xl font-bold text-navy-900">Our Vision</h2>
+                <h2 className="font-serif text-2xl font-semibold tracking-tight text-navy-950">Our Vision</h2>
                 <p className="mt-4 text-lg leading-relaxed text-navy-600">{FOUNDER.vision}</p>
               </div>
             </Reveal>
             <Reveal delay={0.1}>
-              <div className="flex h-full flex-col rounded-3xl bg-white p-10 shadow-card ring-1 ring-navy-300/15">
-                <span className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-aqua-50 text-aqua-600">
-                  <Compass className="h-7 w-7" aria-hidden="true" />
+              <div className="flex h-full flex-col rounded-2xl border border-navy-950/[0.08] bg-white p-10 shadow-card">
+                <span className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-aqua-50 text-aqua-600">
+                  <Compass className="h-6 w-6" aria-hidden="true" />
                 </span>
-                <h2 className="font-display text-2xl font-bold text-navy-900">Our Mission</h2>
+                <h2 className="font-serif text-2xl font-semibold tracking-tight text-navy-950">Our Mission</h2>
                 <p className="mt-4 text-lg leading-relaxed text-navy-600">{FOUNDER.mission}</p>
               </div>
             </Reveal>
@@ -133,11 +133,7 @@ export default function AboutPage() {
         <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 lg:grid-cols-5 lg:gap-16 lg:px-8">
           <Reveal className="lg:col-span-2">
             <div className="relative mx-auto max-w-sm">
-              <div
-                aria-hidden="true"
-                className="absolute -inset-4 rounded-[2.5rem] bg-gradient-to-br from-brand-200/60 to-aqua-200/60 blur-xl"
-              />
-              <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] shadow-float ring-1 ring-navy-300/30">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-2xl shadow-float">
                 {/* PLACEHOLDER portrait — replace with the founder's real photo. */}
                 <Image
                   src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=900&q=80"
@@ -150,10 +146,11 @@ export default function AboutPage() {
             </div>
           </Reveal>
           <Reveal delay={0.1} className="lg:col-span-3">
-            <span className="mb-4 inline-flex items-center rounded-full bg-brand-50 px-4 py-1.5 text-sm font-semibold text-brand-700 ring-1 ring-brand-100">
+            <p className="mb-4 flex items-center gap-3 text-[13px] font-semibold uppercase tracking-[0.16em] text-brand-700">
+              <span aria-hidden="true" className="h-px w-8 bg-brand-400" />
               Founder &amp; Lead Trainer
-            </span>
-            <h2 className="font-display text-3xl font-bold tracking-tight text-navy-900 sm:text-4xl">
+            </p>
+            <h2 className="font-serif text-3xl font-semibold tracking-tight text-navy-950 sm:text-[2.6rem] sm:leading-[1.15]">
               {FOUNDER.name}
             </h2>
             <p className="mt-5 text-lg leading-relaxed text-navy-600">{FOUNDER.story}</p>
@@ -170,7 +167,7 @@ export default function AboutPage() {
       </section>
 
       {/* Certifications — placeholder slots only */}
-      <section className="bg-brand-50/50 py-24">
+      <section className="bg-cream py-24">
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
           <SectionHeading
             eyebrow="Standards & Credentials"
@@ -180,12 +177,12 @@ export default function AboutPage() {
           <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {CREDENTIALS.map((item, i) => (
               <Reveal key={item.title} delay={i * 0.1}>
-                <div className="flex h-full flex-col items-center rounded-3xl bg-white p-8 text-center shadow-card ring-1 ring-navy-300/15">
+                <div className="flex h-full flex-col items-center rounded-2xl border border-navy-950/[0.08] bg-white p-8 text-center shadow-card">
                   {/* PLACEHOLDER SLOT — replace with the official accreditation logo once confirmed. */}
-                  <span className="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-full bg-brand-50 text-brand-600">
-                    <ShieldCheck className="h-7 w-7" aria-hidden="true" />
+                  <span className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-full bg-brand-50 text-brand-600">
+                    <ShieldCheck className="h-6 w-6" aria-hidden="true" />
                   </span>
-                  <h3 className="font-display text-lg font-bold text-navy-900">{item.title}</h3>
+                  <h3 className="font-display text-lg font-bold text-navy-950">{item.title}</h3>
                   <p className="mt-2.5 text-[15px] leading-relaxed text-navy-600">
                     {item.description}
                   </p>

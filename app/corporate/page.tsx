@@ -44,7 +44,7 @@ const pillars = [
 export default function CorporatePage() {
   return (
     <>
-      <section className="bg-gradient-to-b from-brand-50 to-white pb-16 pt-32 sm:pt-36">
+      <section className="border-b border-navy-950/10 bg-cream pb-16 pt-36 sm:pt-40">
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
           <SectionHeading
             as="h1"
@@ -69,11 +69,11 @@ export default function CorporatePage() {
           <div className="grid gap-6 lg:grid-cols-3">
             {pillars.map(({ icon: Icon, title, description }, i) => (
               <Reveal key={title} delay={i * 0.1}>
-                <div className="flex h-full flex-col rounded-3xl bg-white p-8 shadow-card ring-1 ring-navy-300/15">
-                  <span className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-50 text-brand-600">
-                    <Icon className="h-7 w-7" aria-hidden="true" />
+                <div className="flex h-full flex-col rounded-2xl border border-navy-950/[0.08] bg-white p-8 shadow-card">
+                  <span className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand-50 text-brand-600">
+                    <Icon className="h-6 w-6" aria-hidden="true" />
                   </span>
-                  <h2 className="font-display text-xl font-bold text-navy-900">{title}</h2>
+                  <h2 className="font-serif text-xl font-semibold tracking-tight text-navy-950">{title}</h2>
                   <p className="mt-3 leading-relaxed text-navy-600">{description}</p>
                 </div>
               </Reveal>

@@ -16,21 +16,21 @@ export default function TestimonialCarousel() {
   return (
     <div className="relative">
       <div
-        className="overflow-hidden rounded-[2rem] bg-white p-10 shadow-card ring-1 ring-navy-300/15 sm:p-12"
+        className="overflow-hidden rounded-2xl border border-navy-950/[0.08] bg-white p-10 shadow-card sm:p-12"
         aria-live="polite"
       >
-        <Quote className="h-10 w-10 text-brand-200" aria-hidden="true" />
+        <Quote className="h-9 w-9 text-brand-300" aria-hidden="true" />
         <figure key={index} className="animate-[fadeIn_0.4s_ease]">
-          <blockquote className="mt-5 text-lg leading-relaxed text-navy-700 sm:text-xl">
+          <blockquote className="mt-5 font-serif text-xl leading-relaxed tracking-tight text-navy-800 sm:text-2xl">
             &ldquo;{t.text}&rdquo;
           </blockquote>
           <figcaption className="mt-8 flex flex-wrap items-center justify-between gap-4">
             <div className="flex items-center gap-4">
-              <span className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-100 font-display font-bold text-brand-700">
+              <span className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-50 font-display font-bold text-brand-700">
                 {t.name.charAt(0)}
               </span>
               <div>
-                <p className="font-display font-bold text-navy-900">{t.name}</p>
+                <p className="font-display font-bold text-navy-950">{t.name}</p>
                 <p className="text-sm text-navy-500">{t.company}</p>
               </div>
             </div>

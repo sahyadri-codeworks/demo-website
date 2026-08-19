@@ -54,10 +54,10 @@ export default function Header() {
     <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4 sm:px-6">
       <nav
         aria-label="Main"
-        className={`mx-auto flex h-16 max-w-7xl items-center justify-between rounded-full bg-white px-6 transition-shadow duration-300 sm:px-8 ${
+        className={`mx-auto flex h-16 max-w-7xl items-center justify-between rounded-full border border-navy-950/[0.07] bg-white/95 px-6 backdrop-blur-sm transition-shadow duration-300 sm:px-8 ${
           scrolled
-            ? "shadow-[0_2px_4px_rgb(14_15_20/0.06),0_16px_40px_-12px_rgb(14_15_20/0.18)]"
-            : "shadow-[0_1px_2px_rgb(14_15_20/0.04),0_8px_28px_-10px_rgb(14_15_20/0.12)]"
+            ? "shadow-[0_1px_2px_rgb(16_20_31/0.04),0_12px_32px_-12px_rgb(16_20_31/0.14)]"
+            : "shadow-[0_1px_2px_rgb(16_20_31/0.03),0_6px_20px_-8px_rgb(16_20_31/0.08)]"
         }`}
       >
         <Link href="/" className="shrink-0">

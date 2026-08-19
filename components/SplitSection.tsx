@@ -35,7 +35,7 @@ export default function SplitSection({
       <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 lg:grid-cols-2 lg:gap-16 lg:px-8">
         <Reveal className={reverse ? "lg:order-2" : ""}>
           <div className="relative">
-            <div className="relative aspect-[4/3] overflow-hidden rounded-[2rem] shadow-float ring-1 ring-navy-300/30">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-float">
               {/* PLACEHOLDER photo — replace with a real training photo. */}
               <Image
                 src={image}
@@ -46,8 +46,8 @@ export default function SplitSection({
               />
             </div>
             {badge && (
-              <div className="absolute -bottom-6 -right-4 rounded-2xl bg-white px-6 py-4 shadow-float ring-1 ring-navy-300/20 sm:-right-6">
-                <p className="font-display text-3xl font-extrabold text-brand-600">{badge.value}</p>
+              <div className="absolute -bottom-6 -right-4 rounded-xl border border-navy-950/[0.08] bg-white px-6 py-4 shadow-float sm:-right-6">
+                <p className="font-serif text-3xl font-semibold text-brand-600">{badge.value}</p>
                 <p className="text-sm font-semibold text-navy-600">{badge.label}</p>
               </div>
             )}
@@ -55,10 +55,11 @@ export default function SplitSection({
         </Reveal>
 
         <Reveal delay={0.1} className={reverse ? "lg:order-1" : ""}>
-          <span className="mb-4 inline-flex items-center rounded-full bg-aqua-50 px-4 py-1.5 text-sm font-semibold text-aqua-600 ring-1 ring-aqua-200">
+          <p className="mb-4 flex items-center gap-3 text-[13px] font-semibold uppercase tracking-[0.16em] text-brand-700">
+            <span aria-hidden="true" className="h-px w-8 bg-brand-400" />
             {eyebrow}
-          </span>
-          <h2 className="font-display text-3xl font-bold tracking-tight text-navy-900 sm:text-4xl">
+          </p>
+          <h2 className="font-serif text-3xl font-semibold tracking-tight text-navy-950 sm:text-[2.6rem] sm:leading-[1.15]">
             {title}
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-navy-600">{description}</p>

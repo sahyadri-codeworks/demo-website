@@ -47,13 +47,14 @@ export default function ContactPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
       />
 
-      <section className="bg-gradient-to-b from-brand-50 to-white pb-24 pt-32 sm:pt-36">
+      <section className="bg-cream pb-24 pt-36 sm:pt-40">
         <div className="mx-auto grid max-w-7xl gap-14 px-5 lg:grid-cols-5 lg:gap-16 lg:px-8">
           <Reveal className="lg:col-span-2">
-            <span className="mb-4 inline-flex items-center rounded-full bg-white px-4 py-1.5 text-sm font-semibold text-brand-700 ring-1 ring-brand-100">
+            <p className="mb-4 flex items-center gap-3 text-[13px] font-semibold uppercase tracking-[0.16em] text-brand-700">
+              <span aria-hidden="true" className="h-px w-8 bg-brand-400" />
               Contact
-            </span>
-            <h1 className="font-display text-3xl font-bold tracking-tight text-navy-900 sm:text-4xl">
+            </p>
+            <h1 className="font-serif text-3xl font-semibold tracking-tight text-navy-950 sm:text-[2.6rem] sm:leading-[1.15]">
               Let&apos;s Build a Safer Workplace
             </h1>
             <p className="mt-4 text-lg leading-relaxed text-navy-600">
@@ -63,7 +64,7 @@ export default function ContactPage() {
             <ul className="mt-10 space-y-6">
               {infoItems.map(({ icon: Icon, label, value, href }) => (
                 <li key={label} className="flex items-start gap-4">
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white text-brand-600 shadow-sm ring-1 ring-brand-100">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-navy-950/[0.08] bg-white text-brand-600">
                     <Icon className="h-5 w-5" aria-hidden="true" />
                   </span>
                   <div>
@@ -86,7 +87,7 @@ export default function ContactPage() {
             </ul>
 
             {/* PLACEHOLDER — replace with the real Google Maps embed for the training center. */}
-            <div className="mt-10 flex aspect-video items-center justify-center rounded-3xl bg-brand-100/60 ring-1 ring-brand-200">
+            <div className="mt-10 flex aspect-video items-center justify-center rounded-2xl border border-navy-950/10 bg-cream-deep">
               <p className="max-w-xs text-center text-sm font-medium text-navy-600">
                 Google Map embed placeholder — add the official location embed code here.
               </p>

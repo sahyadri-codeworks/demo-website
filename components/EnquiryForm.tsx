@@ -6,7 +6,7 @@ import { COURSES } from "@/data/courses";
 import { WEB3FORMS_KEY } from "@/data/site";
 
 const inputClass =
-  "w-full rounded-xl border border-navy-300/50 bg-white px-4 py-3 text-navy-900 placeholder:text-navy-400 outline-none transition-colors focus:border-brand-500 focus:ring-2 focus:ring-brand-200";
+  "w-full rounded-lg border border-navy-950/15 bg-white px-4 py-3 text-navy-950 placeholder:text-navy-400 outline-none transition-colors focus:border-brand-500 focus:ring-2 focus:ring-brand-200";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
@@ -58,7 +58,7 @@ export default function EnquiryForm() {
 
   if (status === "success") {
     return (
-      <div className="flex flex-col items-center rounded-[2rem] bg-white p-12 text-center shadow-card ring-1 ring-navy-300/15">
+      <div className="flex flex-col items-center rounded-2xl border border-navy-950/[0.08] bg-white p-12 text-center shadow-card">
         <CheckCircle2 className="h-14 w-14 text-emerald-600" aria-hidden="true" />
         <h3 className="mt-5 font-display text-2xl font-bold text-navy-900">Enquiry Sent!</h3>
         <p className="mt-3 max-w-sm text-navy-600">
@@ -79,7 +79,7 @@ export default function EnquiryForm() {
     <form
       onSubmit={handleSubmit}
       noValidate
-      className="rounded-[2rem] bg-white p-8 shadow-card ring-1 ring-navy-300/15 sm:p-10"
+      className="rounded-2xl border border-navy-950/[0.08] bg-white p-8 shadow-card sm:p-10"
     >
       <div className="grid gap-5 sm:grid-cols-2">
         <label className="block">
@@ -128,8 +128,8 @@ export default function EnquiryForm() {
                 aria-pressed={mode === m}
                 className={`rounded-full px-5 py-2.5 text-sm font-semibold transition-all focus-visible:outline-2 focus-visible:outline-brand-600 ${
                   mode === m
-                    ? "bg-brand-600 text-white shadow-md shadow-brand-600/25"
-                    : "bg-brand-50 text-navy-700 ring-1 ring-navy-300/40 hover:ring-brand-300"
+                    ? "bg-brand-600 text-white shadow-md shadow-brand-600/20"
+                    : "border border-navy-950/15 bg-white text-navy-700 hover:border-brand-400 hover:text-brand-700"
                 }`}
               >
                 {m}

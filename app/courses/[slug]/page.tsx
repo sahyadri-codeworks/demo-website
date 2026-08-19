@@ -72,7 +72,7 @@ export default async function CoursePage({ params }: Props) {
       />
 
       {/* Course hero */}
-      <section className="bg-gradient-to-b from-brand-50 to-white pb-16 pt-32 sm:pt-36">
+      <section className="border-b border-navy-950/10 bg-cream pb-16 pt-36 sm:pt-40">
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 lg:grid-cols-2 lg:gap-16 lg:px-8">
           <Reveal>
             <nav aria-label="Breadcrumb" className="mb-5 text-sm font-medium text-navy-500">
@@ -81,7 +81,7 @@ export default async function CoursePage({ params }: Props) {
               </Link>{" "}
               / <span className="text-navy-800">{course.title}</span>
             </nav>
-            <h1 className="font-display text-4xl font-extrabold tracking-tight text-navy-950 sm:text-5xl">
+            <h1 className="font-serif text-4xl font-semibold tracking-tight text-navy-950 sm:text-5xl">
               {course.title}
             </h1>
             <p className="mt-5 max-w-xl text-lg leading-relaxed text-navy-600">{course.tagline}</p>
@@ -95,7 +95,7 @@ export default async function CoursePage({ params }: Props) {
             </div>
           </Reveal>
           <Reveal delay={0.15}>
-            <div className="relative aspect-[4/3] overflow-hidden rounded-[2rem] shadow-float ring-1 ring-navy-300/30">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-float">
               {/* PLACEHOLDER photo — replace with a real session photo for this course. */}
               <Image
                 src={course.image}
@@ -111,7 +111,7 @@ export default async function CoursePage({ params }: Props) {
       </section>
 
       {/* Quick facts */}
-      <section className="border-y border-navy-300/20 bg-white py-10">
+      <section className="border-b border-navy-950/10 bg-white py-10">
         <div className="mx-auto grid max-w-7xl gap-6 px-5 sm:grid-cols-3 lg:px-8">
           {facts.map(({ icon: Icon, label, value }) => (
             <div key={label} className="flex items-start gap-4">
@@ -132,7 +132,7 @@ export default async function CoursePage({ params }: Props) {
         <div className="mx-auto grid max-w-7xl gap-14 px-5 lg:grid-cols-3 lg:gap-16 lg:px-8">
           <div className="lg:col-span-2">
             <Reveal>
-              <h2 className="font-display text-2xl font-bold text-navy-900 sm:text-3xl">
+              <h2 className="font-serif text-2xl font-semibold tracking-tight text-navy-950 sm:text-3xl">
                 About This Program
               </h2>
               <div className="mt-5 space-y-5 text-lg leading-relaxed text-navy-600">
@@ -143,7 +143,7 @@ export default async function CoursePage({ params }: Props) {
             </Reveal>
 
             <Reveal className="mt-14">
-              <h2 className="font-display text-2xl font-bold text-navy-900 sm:text-3xl">
+              <h2 className="font-serif text-2xl font-semibold tracking-tight text-navy-950 sm:text-3xl">
                 What You&apos;ll Learn
               </h2>
               <ul className="mt-6 grid gap-x-8 gap-y-3.5 sm:grid-cols-2">
@@ -157,7 +157,7 @@ export default async function CoursePage({ params }: Props) {
             </Reveal>
 
             <Reveal className="mt-14">
-              <h2 className="font-display text-2xl font-bold text-navy-900 sm:text-3xl">
+              <h2 className="font-serif text-2xl font-semibold tracking-tight text-navy-950 sm:text-3xl">
                 Certification
               </h2>
               <p className="mt-5 text-lg leading-relaxed text-navy-600">{course.certification}</p>
@@ -166,11 +166,11 @@ export default async function CoursePage({ params }: Props) {
 
           <aside>
             <Reveal delay={0.1}>
-              <div className="sticky top-28 rounded-3xl bg-brand-50/60 p-8 ring-1 ring-brand-100">
-                <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white text-brand-600 shadow-sm ring-1 ring-brand-100">
+              <div className="sticky top-28 rounded-2xl border border-navy-950/[0.08] bg-cream p-8">
+                <span className="flex h-12 w-12 items-center justify-center rounded-xl border border-navy-950/[0.08] bg-white text-brand-600">
                   <Users className="h-6 w-6" aria-hidden="true" />
                 </span>
-                <h2 className="mt-5 font-display text-xl font-bold text-navy-900">
+                <h2 className="mt-5 font-serif text-xl font-semibold tracking-tight text-navy-950">
                   Who Should Attend
                 </h2>
                 <ul className="mt-5 space-y-3">

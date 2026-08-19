@@ -33,7 +33,7 @@ export default function HomePage() {
       <TrustBar />
 
       {/* Training categories */}
-      <section className="bg-gradient-to-b from-white to-brand-50/50 py-24">
+      <section className="bg-white py-24">
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
           <SectionHeading
             eyebrow="Training Programs"
@@ -73,7 +73,7 @@ export default function HomePage() {
       />
 
       {/* Why choose us */}
-      <section className="bg-gradient-to-b from-brand-50/50 to-white py-24">
+      <section className="bg-cream py-24">
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
           <SectionHeading
             eyebrow="Why Us"
@@ -93,14 +93,15 @@ export default function HomePage() {
       <HowItWorks />
 
       {/* Training experience */}
-      <section className="bg-brand-50/60 py-24">
+      <section className="bg-cream py-24">
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
           <div className="grid items-center gap-14 lg:grid-cols-2 lg:gap-16">
             <Reveal>
-              <span className="mb-4 inline-flex items-center rounded-full bg-white px-4 py-1.5 text-sm font-semibold text-brand-700 ring-1 ring-brand-100">
+              <p className="mb-4 flex items-center gap-3 text-[13px] font-semibold uppercase tracking-[0.16em] text-brand-700">
+                <span aria-hidden="true" className="h-px w-8 bg-brand-400" />
                 The Training Experience
-              </span>
-              <h2 className="font-display text-3xl font-bold tracking-tight text-navy-900 sm:text-4xl">
+              </p>
+              <h2 className="font-serif text-3xl font-semibold tracking-tight text-navy-950 sm:text-[2.6rem] sm:leading-[1.15]">
                 Don&apos;t Just Learn. Practice.
               </h2>
               <p className="mt-5 text-lg leading-relaxed text-navy-600">
@@ -113,7 +114,7 @@ export default function HomePage() {
                 {experienceLabels.map((label) => (
                   <span
                     key={label}
-                    className="rounded-full bg-white px-4 py-2 text-sm font-semibold text-navy-800 shadow-sm ring-1 ring-navy-300/20"
+                    className="rounded-full border border-navy-950/10 bg-white px-4 py-2 text-sm font-semibold text-navy-800"
                   >
                     {label}
                   </span>
@@ -174,12 +175,12 @@ export default function HomePage() {
           <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {CREDENTIALS.map((item, i) => (
               <Reveal key={item.title} delay={i * 0.1}>
-                <div className="flex h-full flex-col items-center rounded-3xl border border-brand-100 bg-brand-50/50 p-8 text-center transition-colors duration-300 hover:border-brand-200 hover:bg-brand-50">
+                <div className="flex h-full flex-col items-center rounded-2xl border border-navy-950/[0.08] bg-cream p-8 text-center transition-colors duration-300 hover:border-brand-300">
                   {/* PLACEHOLDER SLOT — replace icon with the official accreditation logo once confirmed. */}
-                  <span className="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-full bg-white text-brand-600 shadow-sm ring-1 ring-brand-100">
-                    <ShieldCheck className="h-7 w-7" aria-hidden="true" />
+                  <span className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-full border border-navy-950/[0.08] bg-white text-brand-600">
+                    <ShieldCheck className="h-6 w-6" aria-hidden="true" />
                   </span>
-                  <h3 className="font-display text-lg font-bold text-navy-900">{item.title}</h3>
+                  <h3 className="font-display text-lg font-bold text-navy-950">{item.title}</h3>
                   <p className="mt-2.5 text-[15px] leading-relaxed text-navy-600">
                     {item.description}
                   </p>
@@ -191,15 +192,11 @@ export default function HomePage() {
       </section>
 
       {/* Meet the expert */}
-      <section className="bg-gradient-to-b from-white to-aqua-50/60 py-24">
+      <section className="bg-cream py-24">
         <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 lg:grid-cols-5 lg:gap-16 lg:px-8">
           <Reveal className="lg:col-span-2">
             <div className="relative mx-auto max-w-sm">
-              <div
-                aria-hidden="true"
-                className="absolute -inset-4 rounded-[2.5rem] bg-gradient-to-br from-brand-200/60 to-aqua-200/60 blur-xl"
-              />
-              <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] shadow-float ring-1 ring-navy-300/30">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-2xl shadow-float">
                 {/* PLACEHOLDER portrait — replace with the founder's real photo. */}
                 <Image
                   src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=900&q=80"
@@ -209,18 +206,19 @@ export default function HomePage() {
                   className="object-cover"
                 />
               </div>
-              <div className="absolute -bottom-5 left-1/2 w-max -translate-x-1/2 rounded-2xl bg-white px-6 py-3 text-center shadow-float ring-1 ring-navy-300/20">
-                <p className="font-display font-bold text-navy-900">{FOUNDER.name}</p>
+              <div className="absolute -bottom-5 left-1/2 w-max -translate-x-1/2 rounded-xl border border-navy-950/[0.08] bg-white px-6 py-3 text-center shadow-float">
+                <p className="font-display font-bold text-navy-950">{FOUNDER.name}</p>
                 <p className="text-sm font-medium text-brand-600">{FOUNDER.role}</p>
               </div>
             </div>
           </Reveal>
 
           <Reveal delay={0.1} className="lg:col-span-3">
-            <span className="mb-4 inline-flex items-center rounded-full bg-brand-50 px-4 py-1.5 text-sm font-semibold text-brand-700 ring-1 ring-brand-100">
+            <p className="mb-4 flex items-center gap-3 text-[13px] font-semibold uppercase tracking-[0.16em] text-brand-700">
+              <span aria-hidden="true" className="h-px w-8 bg-brand-400" />
               About the Founder
-            </span>
-            <h2 className="font-display text-3xl font-bold tracking-tight text-navy-900 sm:text-4xl">
+            </p>
+            <h2 className="font-serif text-3xl font-semibold tracking-tight text-navy-950 sm:text-[2.6rem] sm:leading-[1.15]">
               Meet the Expert Behind the Training
             </h2>
             <p className="mt-5 text-lg leading-relaxed text-navy-600">{FOUNDER.story}</p>
@@ -235,7 +233,7 @@ export default function HomePage() {
             <div className="mt-10">
               <Link
                 href="/about"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-7 py-3.5 font-display text-base font-semibold text-navy-800 ring-1 ring-navy-300 transition-all hover:-translate-y-0.5 hover:text-brand-700 hover:ring-brand-400"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-navy-950/15 bg-white px-7 py-3.5 font-display text-base font-semibold text-navy-900 transition-all hover:-translate-y-0.5 hover:border-brand-400 hover:text-brand-700"
               >
                 Meet Our Team <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </Link>
@@ -248,7 +246,7 @@ export default function HomePage() {
       <LogoWall />
 
       {/* Testimonials */}
-      <section className="bg-gradient-to-b from-white to-brand-50/50 py-24">
+      <section className="bg-white py-24">
         <div className="mx-auto max-w-4xl px-5 lg:px-8">
           <SectionHeading
             eyebrow="Testimonials"
@@ -262,7 +260,7 @@ export default function HomePage() {
       </section>
 
       {/* FAQ */}
-      <section id="faq" className="bg-white py-24">
+      <section id="faq" className="bg-cream py-24">
         <div className="mx-auto max-w-3xl px-5 lg:px-8">
           <SectionHeading
             eyebrow="FAQ"
